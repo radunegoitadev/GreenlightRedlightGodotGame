@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cv4alxbb5f5tb"]
+
+[ext_resource type="Texture2D" uid="uid://dbx43aooy46fd" path="res://normal_tree.png" id="1_oq05c"]
+[ext_resource type="Script" uid="uid://bw44oreb35mv1" path="res://SafeZone.cs" id="1_wfx5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1iau"]
+size = Vector2(21, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t23po"]
+size = Vector2(25, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=916627371]
+z_index = 1
+y_sort_enabled = true
+
+[node name="SafeZone" type="Area2D" parent="." unique_id=460093741]
+script = ExtResource("1_wfx5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SafeZone" unique_id=1773866324]
+position = Vector2(-0.5, -26)
+shape = SubResource("RectangleShape2D_x1iau")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1857390807]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("1_oq05c")
+offset = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=790231657]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_t23po")

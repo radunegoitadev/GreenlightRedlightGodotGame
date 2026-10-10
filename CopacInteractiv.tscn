@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cm37dgxibjx4h"]
+
+[ext_resource type="Texture2D" uid="uid://cl0urcvpk7xey" path="res://Tree_Hole.png" id="1_kfajm"]
+[ext_resource type="Script" uid="uid://2hoiof53xush" path="res://SearchZone.cs" id="2_emo8f"]
+[ext_resource type="AudioStream" uid="uid://dyf0fv47tj0g7" path="res://ribhavagrawal-coin-recieved-230517.mp3" id="3_uvyd6"]
+[ext_resource type="Script" uid="uid://bw44oreb35mv1" path="res://SafeZone.cs" id="4_7l1pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t23po"]
+size = Vector2(26.5, 3.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1iau"]
+size = Vector2(11, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emo8f"]
+size = Vector2(22.5, 47)
+
+[node name="CopacInteractiv" type="StaticBody2D" unique_id=1245060195]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2138537042]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("1_kfajm")
+offset = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=916309241]
+position = Vector2(-0.75, -1.25)
+shape = SubResource("RectangleShape2D_t23po")
+
+[node name="SearchZone" type="Area2D" parent="." unique_id=189582582 groups=["HidingSpots"]]
+position = Vector2(0, 5)
+script = ExtResource("2_emo8f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SearchZone" unique_id=1657347803]
+stream = ExtResource("3_uvyd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SearchZone" unique_id=205993333]
+position = Vector2(-0.5, -8.5)
+shape = SubResource("RectangleShape2D_x1iau")
+
+[node name="SafeZone" type="Area2D" parent="." unique_id=261493626 groups=["SafeZones"]]
+script = ExtResource("4_7l1pu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SafeZone" unique_id=1364551240]
+position = Vector2(-0.75, -26)
+shape = SubResource("RectangleShape2D_emo8f")

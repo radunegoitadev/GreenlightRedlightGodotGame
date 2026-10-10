@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bp6afhxi4rta8"]
+
+[ext_resource type="Script" uid="uid://8n112ewd8eex" path="res://Level2.cs" id="1_y0xe8"]
+
+[node name="level2" type="Node2D" unique_id=1579725143]
+y_sort_enabled = true
+script = ExtResource("1_y0xe8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=98379732]
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=595056361]

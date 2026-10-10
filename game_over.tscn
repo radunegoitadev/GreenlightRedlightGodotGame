@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://p2b3e45q8ioy"]
+
+[ext_resource type="Script" uid="uid://dy4y2p34aqmka" path="res://GameOver.cs" id="1_ccer4"]
+[ext_resource type="Texture2D" uid="uid://ri3hw6yvwpt0" path="res://Game_over_Lost.png" id="1_y26ei"]
+[ext_resource type="AudioStream" uid="uid://dpst1onmfyxec" path="res://gameover.wav" id="2_yxx3c"]
+
+[node name="GameOver" type="Control" unique_id=464867464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccer4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1586356750]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_y26ei")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1143527975]
+stream = ExtResource("2_yxx3c")
+pitch_scale = 0.6
